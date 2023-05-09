@@ -17,7 +17,10 @@ const PlanBox: FC<PlanBoxProps> = ({
 }) => {
 
   return (
-    <div className={`p-4 border-red-600 border-2 rounded-md flex items-center gap-5 ${selected && 'bg-red-700/10'}`}>
+    <div
+      onClick={() => onChange(idPlan)}
+      className={`p-4 border-red-600 border-2 rounded-md flex items-center gap-5 ${selected ? 'bg-red-500/10' : 'hover:bg-red-300/10'} cursor-pointer transition-all hover:shadow hover:shadow-red-800/40`}
+    >
       <input
         type="radio"
         name="inline-radio-group"
